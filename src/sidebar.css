@@ -1,0 +1,102 @@
+/* Main sidebar container */
+.sidebar {
+    width: 370px; /* Slightly smaller */
+    height: 100vh; /* Full viewport height */
+    background-color: #1c1c1c; /* Dark charcoal background */
+    color: #f0f0f0; /* Off-white text for better readability */
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Header section for the main title */
+.sidebar-header {
+    padding: 16px 20px 12px 20px;
+    border-bottom: 1px solid #333; /* Subtle separator line */
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 60px; /* Prevent excessive height */
+}
+
+.sidebar-header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px; /* Much smaller */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    height: auto; /* Only take up needed height */
+
+}
+
+/* Container for all the link sections */
+.sidebar-content {
+    padding: 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* A single section of links (e.g., "Core Concepts") */
+.sidebar-section {
+    margin-bottom: 16px; /* Add space between sections */
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 300px; /* Prevent excessive height */
+}
+
+.sidebar-section h3 {
+    font-size: 17px; /* Much smaller */
+    color: #999;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 8px 20px 4px 20px; /* Use padding instead */
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    height: auto; /* Only take up needed height */
+
+}
+
+/* Individual navigation links */
+.sidebar-section a {
+    display: block;
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 6px 20px 6px 30px; /* Consistent with sections */
+    font-size: 18px; /* Reasonable size */
+    line-height: 1.4;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    height: auto; /* Only take up needed height */
+}
+
+/* Hover effect for links */
+.sidebar-section a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar-section button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px 20px 6px 30px; /* Consistent with sections */
+  font-size: 18px;
+  text-align: left;
+}
+
+.sidebar-section button:hover {
+    background-color: #333;
+    color: #fff;
+}
