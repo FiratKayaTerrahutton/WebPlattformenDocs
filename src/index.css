@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* If you have Alliance No.2 locally (WOFF2), place it in public/fonts and uncomment below
+@font-face {
+  font-family: 'Alliance No.2';
+  src: url('/fonts/AllianceNo2-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +23,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override heading typography globally */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alliance No.2', 'Inter', sans-serif;
+  font-weight: 200;
 }
 
 a {
