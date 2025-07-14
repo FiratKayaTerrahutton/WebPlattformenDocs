@@ -100,3 +100,50 @@
     background-color: #333;
     color: #fff;
 }
+
+/* Media queries for smaller screens */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 270px;
+    }
+
+    .sidebar-header {
+        padding: 16px 20px 12px 20px;
+        border-bottom: 1px solid #333;
+        width: 100%;
+        box-sizing: border-box;
+        max-height: 60px;
+    }
+
+    .sidebar-header h1 {
+        font-size: 18px;
+    }
+
+    .sidebar-section {
+        max-height: 200px;
+    }
+
+    .sidebar-section h3 {
+        font-size: 16px;
+    }
+
+    .sidebar-section a {
+        font-size: 16px;
+    }
+
+    .sidebar-section button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .sidebar-header h1 {
+        font-size: 16px;
+    }
+    
+    
+}

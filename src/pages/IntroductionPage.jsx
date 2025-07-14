@@ -26,14 +26,7 @@ const IntroductionPage = () => (
       Grundtanken med arkitekturen är att detta inte är en serie separata project, utan en enda, enhetlig plattform. Plattformen är designad för att dynamiskt kunna konfigurera och presentera ett oändligt antal unika kundprojekt från en och samma kodbas.
     </p>
     <p>
-      Man kan likna det vid en motor och dess bränsle:
-    </p>
-    <ul>
-      <li> Plattformen (koden i <code>/src/</code>)  är själva motorn. Den är kraftfull, generell och vet hur den ska visualisera data, men den innehåller ingen projektspecifik information.</li>
-      <li> Projektdatan (filerna i <code>/projects/</code>)  är bränslet och instruktionerna. Varje undermapp (t.ex. <code>/mogotes/</code>) är en komplett uppsättning konfigurationsfiler och tillgångar som talar om för plattformen <em>exakt</em> vad som ska visas och hur det ska fungera för just det projektet.</li>
-    </ul>
-    <p>
-      Tack vare denna arkitektur behöver en utvecklare inte skriva någon ny kod för att lägga till ett nytt kundprojekt. Processen är helt datadriven: man skapar en ny projektmapp, lägger till de unika 3D-modellerna och bilderna, och definierar projektets alla egenskaper i JSON-konfigurationsfilerna. Plattformen läser sedan denna nya konfiguration och renderar kundvyn dynamiskt.
+      Tack vare denna arkitektur behöver en utvecklare inte skriva någon ny kod för att lägga till ett nytt kundprojekt. Processen är helt datadriven: man skapar en ny projektmapp, lägger till de unika 3D-modellerna och bilderna, och definierar projektets alla egenskaper i JSON-konfigurationsfilerna. Dessa definitioner kan vara allt från camerapunkter, vad och hur clientens förmåga ska bete sig vid varje respektive camerapunkt, punkten på vart dekaler ska ligga, topbar button events och så vidare. Plattformen läser sedan denna nya konfiguration och renderar kundvyn dynamiskt. Ifall det är mogotes projektet öppnar den mogotes genom all den inmattade json datan i katalogen och om det är abrasilver så läser den json filerna i den katalogen.
     </p>
 
     <h2>Kundkatalogen: Projektets DNA</h2>

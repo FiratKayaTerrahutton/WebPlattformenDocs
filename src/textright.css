@@ -83,18 +83,47 @@
 
 /* Media queries for smaller screens */
 @media (max-width: 1024px) {
-    .panel {
-        left: calc(370px + 15px);
-        right: 15px;
-        padding: 20px;
-    }
+  .panel {
+    margin-left: 290px; /* 370px sidebar + 20px gap */
+    width: calc(100% - 310px); /* 100% - (370px sidebar + 20px gap + 20px right margin) */
+  }
 }
 
-@media (max-height: 600px) {
-    .panel {
-        top: 10px;
-        height: calc(100vh - 20px);
-    }
+@media (max-width: 768px) {
+  .panel {
+    margin-left: 170px; /* 370px sidebar + 20px gap */
+    width: calc(100% - 100px); /* 100% - (370px sidebar + 20px gap + 20px right margin) */
+  }
+  .text-content h1 {
+    font-size: 2.2em;
+  }
+  .text-content h2 {
+    font-size: 1.5em;
+  }
+  .text-content h3 {
+    font-size: 1.2em;
+  }
+  .text-content p {
+    font-size: 1em;
+  }
+  .text-content code {
+    font-size: 0.8em;
+  }
+  .text-content pre {
+    font-size: 0.8em;
+  }
+  .text-content pre code {
+    font-size: 0.8em;
+  }
+  .text-content pre .token {
+    font-size: 0.8em;
+  }
+  .text-content pre .token-line {
+    font-size: 0.8em;
+  }
+  .text-content pre .token-line code {
+    font-size: 0.8em;
+  }
 }
 
 /* Inline code highlight like three.js docs */
