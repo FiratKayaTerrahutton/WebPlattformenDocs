@@ -14,6 +14,7 @@ const BrainDumpPage = () => (
     
     <h2>Notes</h2>
     <p>Some notes...</p>
+    <p> Border decal placement texture is not right</p>
   </>
 );
 

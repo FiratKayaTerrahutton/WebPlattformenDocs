@@ -16,9 +16,12 @@ const IntroductionPage = () => (
   "activeProject": "abrasilver"
 }`}</CodeBlock>
     <p><br />Om jag väljer att ändra activeProject till <code>"mogotes"</code> och plattformen hittar katalogen <code>/Projects/mogotes/</code>, samt att i config.json finns en <code>"projectName": "mogotes"</code>, kommer plattformen att köra mogotes konfigurationen istället. Detta sker vid applikationsstart   <code>Main.js</code> startar, läser <code>projectMaster.json</code>, upptäcker att activeProject är satt till <code>"mogotes"</code>, och läser sedan igenom mogotes katalogen. Plattformen startas sedan upp enligt den katalogens specifika konfiguration genom att ladda in alla filer och sätta upp projektet enligt dessa inställningar.</p>
-
     <p>
-      Ifall jag väljer att byta <code>activeProject</code> till <code>mogotes</code> och plattformen känner igen att <code>/Projects/mogotes/</code> existerar, då kör platformen mogotes kunden istället. Detta sker vid applikationsstart: Applikationen läser <code>projectMaster.json</code>, känner igen det aktiva projektet, läser igenom den specifika kundkatalogen och startar upp plattformen enligt den konfigurationen.
+      Ett annat sätt att välja projekt är genom URL-parametern <code>?project=</code>. Till exempel, genom att använda <code>http://localhost:8080/?project=mogotes</code> kommer plattformen att ladda Mogotes-projektet. Detta är huvudmetoden för att bädda in specifika kundprojekt via iframe på externa webbplatser. URL-parametern har högre prioritet än inställningen i <code>projectMaster.json</code> under projektinitialisering, vilket betyder att url är högre upp i prioritet än json filen.
+      <br />
+    </p>
+    <p>
+     Kortsagt kan man säga att det är antingen activeproject eller url parametern som bestämmer vilket projekt som ska köras. Körningen sker i <code>Main.js</code> filen genom att <code>Main.js</code> läser in coresponding katalog i projects.
     </p>
 
     <h2>Kärnkoncept, enkel modulär plattform</h2>
