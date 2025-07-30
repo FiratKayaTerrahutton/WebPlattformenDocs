@@ -1,4 +1,57 @@
 import CodeBlock from '../components/CodeBlock'
+import { useState, useRef } from 'react'
+
+const FullscreenIframe = ({ src, width, height }) => {
+  const iframeRef = useRef(null)
+
+  const enterFullscreen = () => {
+    if (iframeRef.current.requestFullscreen) {
+      iframeRef.current.requestFullscreen()
+    } else if (iframeRef.current.webkitRequestFullscreen) {
+      iframeRef.current.webkitRequestFullscreen()
+    } else if (iframeRef.current.msRequestFullscreen) {
+      iframeRef.current.msRequestFullscreen()
+    }
+  }
+
+  return (
+    <div style={{ position: 'relative', display: 'inline-block' }}>
+      <iframe 
+        ref={iframeRef}
+        src={src} 
+        width={width} 
+        height={height} 
+        allowfullscreen
+        style={{ border: '1px solid #ccc', borderRadius: '4px' }}
+      />
+      <button
+        onClick={enterFullscreen}
+        style={{
+          position: 'absolute',
+          top: '5px',
+          right: '5px',
+          width: '30px',
+          height: '60px',
+          backgroundColor: 'rgb(255, 0, 0)',
+          color: 'black',
+          border: '1px solid #ddd',
+          borderRadius: '2px',
+          cursor: 'pointer',
+          fontSize: '30px',
+          zIndex: 1000,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+        }}
+        title="Enter Fullscreen"
+      >
+        ⛶
+      </button>
+    </div>
+  )
+}
+
 const UsageGuidePage = () => (
   <>
     <h1>Hur du skall bruka den</h1>
@@ -10,7 +63,7 @@ const UsageGuidePage = () => (
 }`}</CodeBlock>
 <br />
 <br />
-    <iframe src="https://Firatportfolio.com" width="1000" height="600"></iframe>
+    <FullscreenIframe src="http://192.168.1.77:8080/?allowFullscreen=true" width="1000" height="600" />
 <br />
 <br />
 <br />
