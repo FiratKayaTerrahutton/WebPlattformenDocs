@@ -5,6 +5,7 @@ import UsageGuidePage from './pages/UsageGuidePage'
 import OnLoadPipelinePage from './pages/OnLoadPipelinePage'
 import KnownBugsPage from './pages/KnownBugsPage'
 import BrainDumpPage from './pages/BrainDumpPage'
+import FeedbackPage from './pages/FeedbackPage'
 
 const pages = {
   introduction: <IntroductionPage />,
@@ -13,6 +14,7 @@ const pages = {
   onLoadPipeline: <OnLoadPipelinePage />,
   knownBugs: <KnownBugsPage />,
   braindump: <BrainDumpPage />,
+  feedback: <FeedbackPage />,
 }
 
 const TextRight = ({ page = 'introduction' }) => {

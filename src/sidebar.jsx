@@ -14,6 +14,7 @@ const Sidebar = ({ onSelect }) => {
           <button onClick={() => onSelect('usageGuide')}>hur du skulle bruka den</button>
           <button onClick={() => onSelect('knownBugs')}>Known Bugs and TODO</button>
           <button onClick={() => onSelect('braindump')}>Braindump</button>
+          <button onClick={() => onSelect('feedback')}>WILIAM FEEDBACK RUNDA</button>
         </div>
         <div className="sidebar-section">
           <h3>Kärn engine</h3>
